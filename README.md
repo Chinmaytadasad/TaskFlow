@@ -1,6 +1,4 @@
 # TaskFlow – Scalable Task Management Web Application  
-## Frontend Developer Intern Assignment
-
 TaskFlow is a modern, secure, and scalable web application built as part of the **Frontend Developer Intern assignment**. This project demonstrates real-world frontend engineering practices along with a production-style backend, including authentication, protected routes, CRUD operations, clean architecture, security best practices, and scalability considerations.
 
 The application is built using **React + Vite + Tailwind CSS** on the frontend and **FastAPI + JWT + MongoDB/SQLite** on the backend.
