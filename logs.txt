@@ -1,0 +1,66 @@
+TaskFlow Backend Production Logs (Render)
+
+==> Server Startup
+Running 'uvicorn app.main:app --host 0.0.0.0 --port 10000'
+INFO: Started server process
+INFO: Application startup complete.
+INFO: Uvicorn running
+
+==> Authentication Flow
+POST /api/auth/register 201 Created
+POST /api/auth/login 200 OK
+GET  /api/auth/me 200 OK
+
+==> Task CRUD Operations
+GET    /api/tasks        200 OK
+POST   /api/tasks        201 Created
+PUT    /api/tasks/{id}   200 OK
+DELETE /api/tasks/{id}   204 No Content
+
+==> CORS & Preflight
+OPTIONS requests handled successfully (200 OK)
+
+==> Sample Raw Logs
+==> Running 'uvicorn app.main:app --host 0.0.0.0 --port 10000'
+INFO:     Started server process [41]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:10000 (Press CTRL+C to quit)
+INFO:     152.57.130.80:0 - "OPTIONS /api/auth/login HTTP/1.1" 200 OK
+INFO:     152.57.130.80:0 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     152.57.130.80:0 - "OPTIONS /api/auth/me HTTP/1.1" 200 OK
+INFO:     152.57.130.80:0 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     152.57.130.80:0 - "OPTIONS /api/tasks HTTP/1.1" 200 OK
+INFO:     152.57.130.80:0 - "GET /api/tasks HTTP/1.1" 200 OK
+INFO:     152.57.130.80:0 - "OPTIONS /api/tasks HTTP/1.1" 200 OK
+INFO:     152.57.130.80:0 - "POST /api/tasks HTTP/1.1" 201 Created
+INFO:     152.57.130.80:0 - "GET /api/tasks HTTP/1.1" 200 OK
+INFO:     152.57.130.80:0 - "OPTIONS /api/tasks/69629b210fb788353c62c34b HTTP/1.1" 200 OK
+INFO:     152.57.130.80:0 - "PUT /api/tasks/69629b210fb788353c62c34b HTTP/1.1" 200 OK
+INFO:     152.57.130.80:0 - "GET /api/tasks HTTP/1.1" 200 OK
+INFO:     152.57.130.80:0 - "DELETE /api/tasks/69629b210fb788353c62c34b HTTP/1.1" 204 No Content
+INFO:     152.57.130.80:0 - "GET /api/tasks HTTP/1.1" 200 OK
+INFO:     152.57.130.80:0 - "OPTIONS /api/auth/register HTTP/1.1" 200 OK
+INFO:     152.57.130.80:0 - "POST /api/auth/register HTTP/1.1" 201 Created
+INFO:     152.57.130.80:0 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     152.57.130.80:0 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     152.57.130.80:0 - "GET /api/tasks HTTP/1.1" 200 OK
+INFO:     152.57.130.80:0 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     152.57.130.80:0 - "GET /api/tasks HTTP/1.1" 200 OK
+INFO:     152.57.130.80:0 - "OPTIONS /api/auth/login HTTP/1.1" 200 OK
+INFO:     152.57.130.80:0 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     152.57.130.80:0 - "OPTIONS /api/auth/me HTTP/1.1" 200 OK
+INFO:     152.57.130.80:0 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     152.57.130.80:0 - "OPTIONS /api/tasks HTTP/1.1" 200 OK
+INFO:     152.57.130.80:0 - "GET /api/tasks HTTP/1.1" 200 OK
+INFO:     152.57.100.1:0 - "OPTIONS /api/auth/register HTTP/1.1" 200 OK
+INFO:     152.57.100.1:0 - "POST /api/auth/register HTTP/1.1" 201 Created
+INFO:     152.57.100.1:0 - "OPTIONS /api/auth/login HTTP/1.1" 200 OK
+INFO:     152.57.100.1:0 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     152.57.100.1:0 - "OPTIONS /api/auth/me HTTP/1.1" 200 OK
+INFO:     152.57.100.1:0 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     152.57.100.1:0 - "OPTIONS /api/tasks HTTP/1.1" 200 OK
+INFO:     152.57.100.1:0 - "GET /api/tasks HTTP/1.1" 200 OK
+INFO:     152.57.100.1:0 - "OPTIONS /api/tasks HTTP/1.1" 200 OK
+INFO:     152.57.100.1:0 - "POST /api/tasks HTTP/1.1" 201 Created
+INFO:     152.57.100.1:0 - "GET /api/tasks HTTP/1.1" 200 OK
