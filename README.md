@@ -180,5 +180,4 @@ All task endpoints are protected using JWT middleware.
 
 ## 👨‍💻 Author
 
-**Chinmay Tadasad**  
-MCA Student – PES University  
+**Chinmay Tadasad** 
